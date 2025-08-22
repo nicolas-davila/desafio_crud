@@ -11,6 +11,8 @@
 
     }
 
+    $result = mysqli_query($conn, "SELECT * FROM insumos");
+
 ?>
 
 <!DOCTYPE html>
@@ -27,14 +29,11 @@
         <input type="text" name="descricao" placeholder="Ex: Açucar" required>
         <input type="submit" value="Cadastrar Insumos">
 
-    </form>
+    </form><br>
     <table border="1" cellpadding="10">
         <tr>
             <th>Id</th>
-            <th>Atividade</th>
-            <th>Pessoa Atribuida</th>
-            <th>Status</th>
-            <th>Insumos</th>
+            <th>Descrição dos Insumos</th>
             <th>Ações</th>
         </tr>
 
@@ -42,30 +41,16 @@
             <?php while($row=mysqli_fetch_assoc($result)): ?>
                 <tr>
                     <td><?php echo $row['id']?></td>
-                    <td><?php echo $row['atividade']?></td>
-                    <td><?php echo $row['usuario']; ?></td>
-                    <td><?php echo $row['producao']?></td>
-                    <td><?php
-                    
-                            $resultInsumos = mysqli_query($conn, "SELECT * FROM atividade_insumos as ai JOIN insumos as i ON i.id=ai.insumos_id where ai.atividade_id=".$row['id']);
-                            while($atvInsumos=mysqli_fetch_assoc($resultInsumos)){
-                                echo $atvInsumos['descricao_insumos']."<br>";
-                            }
-                        ?>
-
-                    </td>
+                    <td><?php echo $row['descricao_insumos']?></td>
                     <td>
-                         <a href="atribuir_insumos.php?id=<?php echo $row['id']?>">Atribuir Insumos</a><br>
-                        <a href="atribuir_usuario.php?id=<?php echo $row['id']?>">Atribuir Usuário</a><br>
-
-                        <a href="edit_atividade.php?id=<?php echo $row['id']?>">Editar</a><br>
-                        <a href="delete_atividade.php?id=<?php echo $row['id']?>" onclick="return confirm('Tem certeza de que deseja exlcuir a atividade?')">Excluir</a>
+                        <a href="edit_insumos.php?id=<?php echo $row['id']?>">Editar Insumos</a><br>
+                        <a href="delete_insumos.php?id=<?php echo $row['id']?>" onclick="return confirm('Tem certeza de que deseja exlcuir a atividade?')">Excluir</a>
                     </td>
                 </tr>
             <?php endwhile; ?>
             <?php else: ?>
                 <tr>
-                    <td colspan="4">Nenhuma atividade encontrada!</td>
+                    <td colspan="4">Nenhum insumo encontrado!</td>
                 </tr>
         <?php endif; ?>
 
