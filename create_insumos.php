@@ -2,7 +2,7 @@
 
     include("db.php");
 
-    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if($_SERVER['REQUEST_METHOD'] == 'POST') { // Dentro do if só vai rodar após o submit do form
         $descricao = $_POST['descricao'];
 
         $sql = "INSERT INTO insumos (descricao_insumos) VALUES ('$descricao')";
@@ -11,7 +11,7 @@
 
     }
 
-    $result = mysqli_query($conn, "SELECT * FROM insumos");
+    $result = mysqli_query($conn, "SELECT * FROM insumos"); // Lembra de chamar a consulta aqui fora do if para carregar a tabela sempre
 
 ?>
 
