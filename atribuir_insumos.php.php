@@ -10,6 +10,8 @@
         mysqli_query($conn, $result);
         header("Location: index.php");
     }
+
+    $atividade_selecionada = mysqli_query($conn, "SELECT * FROM atividades WHERE id=$id");
 ?>
 
 
@@ -22,6 +24,12 @@
 </head>
 <body>
     <h2>Atribuir Insumos</h2>
+    <p><?php 
+    
+        $row = mysqli_fetch_assoc($atividade_selecionada);
+        echo $row['atividade'];
+    
+    ?></p>
     <form method="post">
         <select name="atribuir_insumos">
 
