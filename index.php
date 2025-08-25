@@ -39,7 +39,7 @@
                     
                             $resultInsumos = mysqli_query($conn, "SELECT * FROM atividade_insumos as ai JOIN insumos as i ON i.id=ai.insumos_id where ai.atividade_id=".$row['id']);
                             while($atvInsumos=mysqli_fetch_assoc($resultInsumos)){
-                                echo $atvInsumos['descricao_insumos']."<br>";
+                                echo $atvInsumos['descricao_insumos'] . "<br>";
                             }
                         ?>
 
