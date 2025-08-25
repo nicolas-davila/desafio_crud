@@ -5,8 +5,9 @@
     $id = $_GET["id"];
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $insumos_id = $_POST['atribuir_insumos'];
+        $insumos_info = $_POST['informacao']; 
 
-        $result = "INSERT INTO atividade_insumos (atividade_id, insumos_id) VALUES ($id, $insumos_id)";
+        $result = "INSERT INTO atividade_insumos (atividade_id, insumos_id, informacoes) VALUES ($id, $insumos_id, $insumos_info)";
         mysqli_query($conn, $result);
         header("Location: index.php");
     }
@@ -43,7 +44,7 @@
             ?>
 
         </select>
-        
+        <input type="text" name="informacao" placeholder="Informe a quantidade ou outra informação.">
         <input type="submit" value="Atribuir Insumos">
     </form>
 </body>
