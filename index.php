@@ -45,11 +45,11 @@
 
                     </td>
                     <td>
-                         <a href="atribuir_insumos.php?id=<?php echo $row['id']?>">Atribuir Insumos</a><br>
+                        <a href="atribuir_insumos.php?id=<?php echo $row['id']?>">Atribuir Insumos</a><br>
                         <a href="atribuir_usuario.php?id=<?php echo $row['id']?>">Atribuir Usuário</a><br>
 
-                        <a href="edit_atividade.php?id=<?php echo $row['id']?>">Editar</a><br>
-                        <a href="delete_atividade.php?id=<?php echo $row['id']?>" onclick="return confirm('Tem certeza de que deseja exlcuir a atividade?')">Excluir</a>
+                        <a href="edit_atividade.php?id=<?php echo $row['id']?>">Editar Atividade</a><br>
+                        <a href="delete_atividade.php?id=<?php echo $row['id']?>" onclick="return confirm('Tem certeza de que deseja exlcuir a atividade?')">Excluir Atividade</a>
                     </td>
                 </tr>
             <?php endwhile; ?>
