@@ -44,7 +44,7 @@
                     <td><?php echo $row['descricao_insumos']?></td>
                     <td>
                         <a href="edit_insumos.php?id=<?php echo $row['id']?>">Editar Insumos</a><br>
-                        <a href="delete_insumos.php?id=<?php echo $row['id']?>" onclick="return confirm('Tem certeza de que deseja exlcuir a atividade?')">Excluir</a>
+                        <a href="delete_insumos.php?id=<?php echo $row['id']?>" onclick="return confirm('Tem certeza de que deseja exlcuir a atividade?')">Excluir insumo</a>
                     </td>
                 </tr>
             <?php endwhile; ?>
