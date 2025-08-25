@@ -26,7 +26,7 @@
     <form method="post">
         <input type="text" name="nome" placeholder="Nome do Usuário" required>
         <input type="submit" value="Cadastrar Usuário">
-    </form>
+    </form> <br>
     <table border="1" cellpadding="10">
         <tr>
             <th>Id</th>

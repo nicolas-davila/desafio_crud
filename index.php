@@ -14,7 +14,7 @@
     <title>Cadastrar atividade</title>
 </head>
 <body>
-    <h2>Cadastrar pessoas</h2>
+    <h2>Página de Receitas</h2>
     <a href="create_atividade.php">Criar nova atividade</a>
     <a href="create_usuario.php">Criar um novo usuário</a>
     <a href="create_insumos.php">Criar Insumos</a>
