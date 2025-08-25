@@ -43,7 +43,7 @@
                             }
                         ?>
 
-                    </td>
+                    </td>  
                     <td>
                         <a href="atribuir_insumos.php?id=<?php echo $row['id']?>">Atribuir Insumos</a><br>
                         <a href="atribuir_usuario.php?id=<?php echo $row['id']?>">Atribuir Usuário</a><br>

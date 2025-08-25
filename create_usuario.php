@@ -40,8 +40,8 @@
                     <td><?php echo $row['id']?></td>
                     <td><?php echo $row['nome']?></td>
                     <td>
-                        <a href="edit_insumos.php?id=<?php echo $row['id']?>">Editar usuário</a><br>
-                        <a href="delete_insumos.php?id=<?php echo $row['id']?>" onclick="return confirm('Tem certeza de que deseja exlcuir a atividade?')">Excluir usuário</a>
+                        <a href="edit_usuarios.php?id=<?php echo $row['id']?>">Editar usuário</a><br>
+                        <a href="delete_usuarios.php?id=<?php echo $row['id']?>" onclick="return confirm('Tem certeza de que deseja exlcuir a atividade?')">Excluir usuário</a>
                     </td>
                 </tr>
             <?php endwhile; ?>
